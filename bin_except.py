@@ -9,7 +9,6 @@ class TargetNotFound(Exception):
   Exception raised when the search on a_list does not find a target value.
   """
 
-
 def binary_search(a_list, target):
   """
   Searches a_list for an occurrence of target
@@ -28,8 +27,8 @@ def binary_search(a_list, target):
       first = middle + 1
   raise TargetNotFound(f"Value '{target}' not found in the list.")
 
-# try:
-#     index = binary_search([1, 3, 5, 7, 9], 4)
-#     print(f"Target found at index: {index}")
-# except TargetNotFound as e:
-#     print(e)
+try:
+    index = binary_search([1, 3, 5, 7, 9], 4)
+    print(f"Target found at index: {index}")
+except TargetNotFound as e:
+    print(e)
